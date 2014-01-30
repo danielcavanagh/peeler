@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical"
+      android:layout_height="fill_parent"
+      android:layout_width="fill_parent">
+
+    <TextView android:id="@+id/artist"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:paddingTop="10px" />
+    <TextView android:id="@+id/album"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent" />
+    <TextView android:id="@+id/songTitle"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:paddingBottom="10px" />
+
+    <LinearLayout android:orientation="horizontal"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:paddingTop="10px"
+      android:paddingBottom="10px">
+        <Button android:id="@+id/prev"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:text="Prev"
+		  android:onClick="prev" />
+        <Button android:id="@+id/play"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:text="Play"
+		  android:onClick="play" />
+        <Button android:id="@+id/pause"
+		  android:visibility="gone"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:text="Pause"
+		  android:onClick="pause" />
+        <Button android:id="@+id/next"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:text="Next"
+		  android:onClick="next" />
+
+        <ToggleButton android:id="@+id/shuffle"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:textOff="No Shuffle"
+          android:textOn="Shuffle"
+          android:onClick="toggleShuffle" />
+
+        <ToggleButton android:id="@+id/repeat"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:textOff="No Repeat"
+          android:textOn="Repeat"
+          android:onClick="toggleRepeat" />
+    </LinearLayout>
+
+    <RelativeLayout android:layout_height="wrap_content"
+      android:layout_width="fill_parent">
+        <TextView android:id="@+id/currentTime"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:layout_alignParentLeft="true" />
+        <TextView android:id="@+id/totalTime"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <SeekBar android:id="@+id/position"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:paddingLeft="10px"
+	  android:paddingRight="10px" />
+</LinearLayout>

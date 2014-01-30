@@ -1,0 +1,5 @@
+#!/bin/bash
+ant debug
+if [ $? -eq 0 ] ; then
+	adb install -r bin/Peeler-debug.apk
+fi
