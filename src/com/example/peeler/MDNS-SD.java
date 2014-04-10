@@ -49,6 +49,11 @@ class MDNSSD {
 		List<MDNSRecord> services = new ArrayList<MDNSRecord>();
 		DatagramPacket packet = new DatagramPacket(new byte[4096], 4096);
 
+		// TODO MAKE THREAD CLEAN !     ANDROID OS > 4.2 !
+		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+       		StrictMode.setThreadPolicy(policy);
+       
+       
 		socket.send(createQuery(types));
 
 		while (true) {
